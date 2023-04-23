@@ -15,10 +15,11 @@ export default function Banner() {
                 <Button>became a member</Button>
             </RightBox>
             <LeftBox>
-
+                <Circle>
                 <CircleButton>
                     <FaPlay/>
                 </CircleButton>
+                </Circle>
             </LeftBox>
         </Container>
     </div>
@@ -42,21 +43,32 @@ align-items: center;
 
 const LeftBox = styled.div`
 width: 50%;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+
 `;
 const RightBox = styled.div`
 width: 50%;
 padding: 0px 100px;
 `;
 
+const Circle = styled.div`
+border: 3px solid red;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-right: 120px;
+padding: 2px;
+`;
 const CircleButton = styled.button`
 outline: none;
 background-color: red;
 color: white;
-width: 80px;
-height: 80px;
+width: 100%;
+height: 100%;
 border-radius: 50%;
 border: none;
-margin-left:100px;
-margin-top: 100px;
+cursor: pointer;
 
 `;
