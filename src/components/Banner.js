@@ -5,37 +5,44 @@ import Button from './reusable/Button'
 import bg from "../assets/img_1.jpg"
 import WithBarTitle from './reusable/WithBarTitle'
 import {FaPlay} from "react-icons/fa";
+import Header from './Header'
 export default function Banner() {
   return (
     <div>
-        <Container>
-            <RightBox>
-                <WithBarTitle title="with PRANJAL RANA"/>
-                <H1>Build perfect body shape for good and healthy life.</H1>
-                <Button>became a member</Button>
-            </RightBox>
-            <LeftBox>
-                <Circle>
-                <CircleButton>
-                    <FaPlay/>
-                </CircleButton>
-                </Circle>
-            </LeftBox>
-        </Container>
+        <Main>
+            <Header/>
+            <Container>
+                <RightBox>
+                    <WithBarTitle title="with PRANJAL RANA"/>
+                    <H1>Build perfect body shape for good and healthy life.</H1>
+                    <Button>became a member</Button>
+                </RightBox>
+                <LeftBox>
+                    <Circle>
+                    <CircleButton>
+                        <FaPlay/>
+                    </CircleButton>
+                    </Circle>
+                </LeftBox>
+            </Container>
+        </Main>
     </div>
     
   )
 }
 
-
-const Container = styled.div`
+const Main = styled.div`
 width: 100%;
 height: 100vh;
 background-image: url(${bg});
 background-attachment: fixed;
 background-repeat: no-repeat;
 background-size: cover;
+`;
 
+const Container = styled.div`
+width: 100%;
+height: 90%;
 display: flex;
 flex-direction: row;
 align-items: center;
